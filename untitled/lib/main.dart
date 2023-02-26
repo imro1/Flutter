@@ -10,41 +10,55 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        backgroundColor: Colors.grey,
+        backgroundColor: Colors.blueGrey,
         body: SafeArea(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              CircleAvatar(
-                radius: 50,
-                backgroundImage: NetworkImage("https://static.vecteezy.com/system/resources/thumbnails/005/544/770/small/profile-icon-design-free-vector.jpg"),
-              ),
-              Text(
-                'Imran Maslianov',
-                style: TextStyle(
-                  // fontFamily: 'Pacifico',
-                  fontSize: 20,
-                  letterSpacing: 2.5,
-                  color: Colors.teal.shade100,
-                  fontWeight: FontWeight.bold,
+              Center(
+                child: CircleAvatar(
+                  radius: 100,
+                  backgroundImage: NetworkImage("https://avatars.githubusercontent.com/u/89648621?s=400&u=eb3563e970d85fd4909c86130090e93ed22f19c4&v=4"),
                 ),
               ),
-              Text(
-                  'Moble Developper',
+              SizedBox(
+                height: 50,
+                width: double.infinity,
+              ),
+              Center(
+                child: Text(
+                  'Imran Maslianov',
                   style: TextStyle(
-                  // fontFamily: 'Pacifico',
-                  fontSize: 20,
-                  letterSpacing: 2.5,
-                  color: Colors.teal.shade100,
-                  fontWeight: FontWeight.bold,
+                    fontFamily: 'SourceSanspro',
+                    fontSize: 35,
+                    letterSpacing: 2.5,
+                    color: Colors.teal.shade100,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
               SizedBox(
                 height: 20,
-                width: 150,
+                width: double.infinity,
+              ),
+              Center(
+                child: Text(
+                    'Mobile Developper',
+                    style: TextStyle(
+                    fontFamily: 'SourceSansPro',
+                    fontSize: 35,
+                    letterSpacing: 2.5,
+                    color: Colors.teal.shade100,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: 50,
+                width: double.infinity,
                 child: Divider(
-                  color: Colors.teal.shade100,
+                  color: Colors.teal,
                 ),
               ),
               Card(
@@ -54,27 +68,32 @@ class MyApp extends StatelessWidget {
                     Icons.phone,
                     color: Colors.teal,
                   ),
-                  title: Text('+1 123 456 6790',
+                  title: Center(
+                    child: Text('(438)-408-5713',
+                    style: TextStyle(
+                      color: Colors.teal.shade900,
+                      //fontFamily: 'SourceSans Pro',
+                      fontSize: 20,
+                    ),
+                ),
+                  ),
+              ),
+              ),
+
+          Card(
+            margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
+            child: ListTile(
+              leading: Icon(
+                Icons.email,
+                color: Colors.teal,
+              ),
+              title: Center(
+                child: Text('maslianov.imran@gmail.com',
                   style: TextStyle(
                     color: Colors.teal.shade900,
                     //fontFamily: 'SourceSans Pro',
                     fontSize: 20,
                   ),
-                ),
-              ),
-              ),
-          Card(
-            margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
-            child: ListTile(
-              leading: Icon(
-                Icons.phone,
-                color: Colors.teal,
-              ),
-              title: Text('wtv@email.com',
-                style: TextStyle(
-                  color: Colors.teal.shade900,
-                  //fontFamily: 'SourceSans Pro',
-                  fontSize: 20,
                 ),
               ),
             ),
